@@ -1,5 +1,7 @@
 use std::path::PathBuf;
 
+use advent_of_code::day_01;
+
 fn main() {
     let args: Vec<_> = std::env::args().collect();
     if args.len() != 2 {
@@ -21,8 +23,12 @@ fn main() {
         return;
     };
 
-    match day {
-        1..=25 => todo!(),
+    let (part_1, part_2) = match day {
+        1 => day_01::solve(&input),
+        2..=25 => todo!(),
         _ => unreachable!(),
-    }
+    };
+
+    println!("part 1: {part_1}");
+    println!("part 2: {part_2}");
 }
