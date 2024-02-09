@@ -1,6 +1,6 @@
 use std::path::PathBuf;
 
-use advent_of_code::day_01;
+use advent_of_code::{day_01, day_02};
 
 fn main() {
     let args: Vec<_> = std::env::args().collect();
@@ -25,7 +25,8 @@ fn main() {
 
     let (part_1, part_2) = match day {
         1 => day_01::solve(&input),
-        2..=25 => todo!(),
+        2 => day_02::solve(&input),
+        3..=25 => todo!(),
         _ => unreachable!(),
     };
 
